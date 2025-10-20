@@ -1,0 +1,40 @@
+data:
+  # choose ONE of: BTC, ETH, BNB, SOL, XRP, DOGE, AVAX
+  symbol: ETH
+  data_dir: ./data
+  pattern: "*USDT_1m_2024.csv"
+  use_ohlcv: true  # <— set false to use Close-only
+  use_engineered: false
+
+window:
+  input_seq_len: 150   # past window length
+  horizon: 1          # forecast horizon
+  step_size: 8         # sliding step
+
+splits:
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+xgboost:
+  n_estimators: 400
+  max_depth: 6
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 1
+  n_jobs: -1
+  max_bin: 128
+  random_state: 42
+
+transformer:
+  d_model: 128
+  nhead: 8
+  num_layers: 4
+  dropout: 0.1
+  lr: 1e-3
+  epochs: 30
+  batch_size: 256
+  patience: 15
+
+
+
+

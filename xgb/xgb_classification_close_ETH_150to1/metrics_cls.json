@@ -1,0 +1,20 @@
+{
+  "config_path": "C:\\Users\\rjv71\\PycharmProjects\\Stock_Forecasting_Transformer\\config\\classification.yaml",
+  "task": "classification",
+  "chosen_threshold": 0.5,
+  "train": {
+    "ACC": 0.9781322356573192,
+    "F1": 0.9781883500128303,
+    "AUC": 0.9977599761939557
+  },
+  "valid": {
+    "ACC": 0.48717948717948717,
+    "F1": 0.5058823529411764,
+    "AUC": 0.48804105684240784
+  },
+  "test": {
+    "ACC": 0.4810744810744811,
+    "F1": 0.4922341696535245,
+    "AUC": 0.4902779434569963
+  }
+}
